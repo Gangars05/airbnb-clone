@@ -1,0 +1,41 @@
+:root{--ink:#14262b;--muted:#5d6f74;--line:#d9e2e4;--bg:#f6f9f9;--brand:#0b6e6e;--brand-d:#085757;--hot:#e4572e;--r:14px}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+h1,h2,h3,.logo{font-family:'Bricolage Grotesque','Figtree',sans-serif;line-height:1.15}
+a{color:var(--brand)}main{max-width:1180px;margin:0 auto;padding:0 20px 60px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav nav{display:flex;gap:18px;align-items:center}.nav a{text-decoration:none;font-weight:500}
+.logo{font-size:1.5rem;font-weight:700;color:var(--hot)!important}
+.btn{background:var(--brand);color:#fff;border:0;border-radius:10px;padding:11px 20px;font:600 1rem 'Figtree',sans-serif;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:var(--brand-d)}.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.small{padding:7px 14px;font-size:.9rem}.btn.ghost{background:#fff;color:var(--brand);border:1.5px solid var(--brand)}
+.btn.danger{background:#fff;color:#b3261e;border:1.5px solid #b3261e}
+.link{background:none;border:0;font:500 1rem 'Figtree',sans-serif;color:var(--ink);cursor:pointer}
+:focus-visible{outline:3px solid #f5b700;outline-offset:2px}
+input,select,textarea{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+label{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--muted)}
+.hero{padding:44px 0 24px}.hero h1{font-size:clamp(1.9rem,4.5vw,3.2rem);max-width:15em;margin:0 0 24px}
+.search{display:grid;grid-template-columns:2fr 1fr 1fr .7fr auto;gap:12px;align-items:end;background:#fff;padding:16px;border-radius:var(--r);border:1px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.filters>*{width:auto;min-width:130px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px;margin-top:20px}
+.card{text-decoration:none;color:inherit;background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.card img,.ph{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.ph{background:#dfeaea;display:grid;place-items:center;color:var(--muted)}
+.info{display:flex;flex-direction:column;padding:12px 14px 16px;gap:2px}.info span{color:var(--muted);font-size:.92rem}
+.empty{color:var(--muted);padding:30px 0}
+.msg{padding:10px 14px;border-radius:10px;margin:10px 0}.msg.ok{background:#e0f4e8;color:#14532d}.msg.err{background:#fde8e6;color:#8c1d14}
+.detail h1{font-size:2.2rem;margin:20px 0 6px}.muted{color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px;border-radius:var(--r);overflow:hidden;margin-top:20px}
+.gallery img{width:100%;height:300px;object-fit:cover}.ph.big{height:300px}
+.cols{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:start}
+.book,.panel{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:12px}
+.book{position:sticky;top:80px;margin-top:20px}.price{font-size:1.5rem}.total{margin:0}
+.panel.narrow{max-width:420px;margin:50px auto}.panel h2,.panel h1{margin:0}
+.dash h1{margin:30px 0 10px}.dash section{margin-top:34px}.dash section.panel{display:block}
+.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.wide{grid-column:1/-1}
+.acts{display:flex;gap:10px;align-items:center}
+.rows{display:grid;gap:12px}.row{display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:10px}
+.row img,.row .ph{width:96px;aspect-ratio:1;border-radius:10px}
+@media(max-width:860px){.search{grid-template-columns:1fr 1fr}.search .btn{grid-column:1/-1}.cols{grid-template-columns:1fr;gap:0}.book{position:static}.formgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.search,.formgrid{grid-template-columns:1fr}.row{grid-template-columns:72px 1fr}.row .acts{grid-column:1/-1}.row img,.row .ph{width:72px}.nav{padding:12px 16px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
